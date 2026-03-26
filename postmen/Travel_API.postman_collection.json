@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "1160af2b-1bc9-4a13-a221-422e4981c3ab",
+		"name": "Travel Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48841984",
+		"_collection_link": "https://aleksejlitovcenko69-486195.postman.co/workspace/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D1%82%D0%BE%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE's-Workspace~e86647c5-41f3-4210-8628-91c7a966467d/collection/48841984-1160af2b-1bc9-4a13-a221-422e4981c3ab?action=share&source=collection_link&creator=48841984"
+	},
+	"item": [
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Create project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Chicago Trip\",\r\n  \"description\": \"Art museums\",\r\n  \"start_date\": \"2026-04-01\",\r\n  \"places\": [\r\n    {\r\n      \"external_id\": 129884,\r\n      \"notes\": \"Must see\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get project",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects/{id}/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects",
+								"{id}",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update project",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Updated Trip\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects/{id}/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects",
+								"{id}",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete project",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects/{id}/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects",
+								"{id}",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "places",
+			"item": [
+				{
+					"name": "List places",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects/{id}/places/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects",
+								"{id}",
+								"places",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update place (visited)",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/project-places/{id}/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"project-places",
+								"{id}",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update notes",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"notes\": \"Visited in the morning\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/project-places/{id}/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"project-places",
+								"{id}",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add place",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"external_id\": 14644,\r\n  \"notes\": \"Interesting\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/projects/{id}/places/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"projects",
+								"{id}",
+								"places",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
